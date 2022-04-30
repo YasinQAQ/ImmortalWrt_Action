@@ -1,6 +1,4 @@
-
 name: Build ImmortalWrt
-
 on:
   workflow_dispatch:
 
@@ -9,10 +7,9 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - name: Check Out
-      - uses: actions/checkout@v3
-
-      - name: Initialization environment
-        run: pwd
-
-  
+    - name: Check Out
+      uses: actions/checkout@v3
+      
+    - name: Initialization environment
+      run: |
+        pwd
