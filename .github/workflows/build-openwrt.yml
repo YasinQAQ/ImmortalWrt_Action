@@ -94,8 +94,8 @@ jobs:
         echo "FILE_DATE=_$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
 
     - name: Check space usage
-       if: (!cancelled())
-       run: df -hT
+      if: (!cancelled())
+      run: df -hT
 
     # - name: Upload bin directory
     #   uses: actions/upload-artifact@main
