@@ -1,6 +1,15 @@
 name: Build ImmortalWrt
 on:
   workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false' 
+        type: choice
+        options:
+        - true
+        - false
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
